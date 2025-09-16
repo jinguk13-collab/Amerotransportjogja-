@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amero Transport</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Amero Transport</h1>
+    <button id="menu-btn" class="md:hidden">☰</button>
+    <nav id="menu" class="hidden md:flex space-x-4">
+      <a href="#layanan" class="hover:underline">Layanan</a>
+      <a href="#kontak" class="hover:underline">Kontak</a>
+      <a href="#booking" class="hover:underline">Booking</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-blue-500 text-white text-center p-10">
+    <h2 class="text-3xl font-bold mb-4">Sewa Mobil di Yogyakarta</h2>
+    <p class="mb-6">Nyaman, terjangkau, dan terpercaya untuk perjalanan Anda.</p>
+    <a href="#booking" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold">Pesan Sekarang</a>
+  </section>
+
+  <!-- Layanan -->
+  <section id="layanan" class="p-6">
+    <h3 class="text-2xl font-bold mb-4">Pilihan Mobil</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="bg-white rounded-2xl shadow p-4">
+        <img src="Avanza.jpg" alt="Toyota Avanza"style="width:300px; height:200px;">
+        <h4 class="text-xl font-semibold">Toyota Avanza</h4>
+        <p class="text-gray-600">Mulai Rp350.000 / hari</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4">
+<img src="Inova.jpg" alt="Toyota Inova"style="width:300px; height:200px;">
+
+        <h4 class="text-xl font-semibold">Toyota Innova</h4>
+        <p class="text-gray-600">Mulai Rp500.000 / hari</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4">
+        <img src="haice.jpg" alt="Toyota Haice"style="width:300px; height:200px;">
+
+        <h4 class="text-xl font-semibold">Toyota Hiace</h4>
+        <p class="text-gray-600">Mulai Rp1.000.000 / hari</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section id="booking" class="p-6 bg-blue-50">
+    <h3 class="text-2xl font-bold mb-4">Booking Sekarang</h3>
+    <p class="mb-4">Klik tombol di bawah untuk booking via WhatsApp.</p>
+    <a href="https://wa.me/6285799092731" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold shadow">
+      Booking via WhatsApp
+    </a>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="p-6">
+    <h3 class="text-2xl font-bold mb-4">Kontak Kami</h3>
+    <p>Email: amero.transport@gmail.com</p>
+    <p>WhatsApp: +62 857-9909-2731</p>
+    <p>Lokasi: Gg. Sadewa, Ceper, Wedomartani, Kec. Ngemplak, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55584</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center p-4 mt-6">
+    <p>&copy; 2025 Amero Transport. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

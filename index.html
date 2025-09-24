@@ -6,76 +6,77 @@
   <title>Amero Transport</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 font-sans">
   <!-- Navbar -->
-  <header class="bg-blue-600 text-white p-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold">Amero Transport</h1>
-    <button id="menu-btn" class="md:hidden">☰</button>
-    <nav id="menu" class="hidden md:flex space-x-4">
-      <a href="#layanan" class="hover:underline">Layanan</a>
-      <a href="#kontak" class="hover:underline">Kontak</a>
-      <a href="#booking" class="hover:underline">Booking</a>
-    </nav>
+  <header class="bg-blue-600 text-white p-4 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide">Amero Transport</h1>
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">☰</button>
+      <nav id="menu" class="hidden md:flex space-x-6 font-medium">
+        <a href="#layanan" class="hover:text-yellow-300 transition">Layanan</a>
+        <a href="#kontak" class="hover:text-yellow-300 transition">Kontak</a>
+        <a href="#booking" class="hover:text-yellow-300 transition">Booking</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Hero -->
-  <section class="bg-blue-500 text-white text-center p-10">
-    <h2 class="text-3xl font-bold mb-4">Sewa Mobil di Yogyakarta</h2>
-    <p class="mb-6">Nyaman, terjangkau, dan terpercaya untuk perjalanan Anda.</p>
-    <a href="#booking" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold">Pesan Sekarang</a>
+  <section class="bg-gradient-to-r from-blue-500 to-blue-700 text-white text-center py-16 px-4">
+    <h2 class="text-4xl font-extrabold mb-4">Sewa Mobil di Yogyakarta</h2>
+    <p class="mb-6 text-lg">Nyaman, terjangkau, dan terpercaya untuk perjalanan Anda.</p>
+    <a href="#booking" class="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold shadow hover:bg-yellow-400 hover:text-white transition">Pesan Sekarang</a>
   </section>
 
   <!-- Layanan -->
-  <section id="layanan" class="p-6">
-    <h3 class="text-2xl font-bold mb-4">Pilihan Mobil</h3>
-    <div class="grid md:grid-cols-3 gap-6">
+  <section id="layanan" class="py-12 px-6 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-bold mb-8 text-center">Pilihan Mobil</h3>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-      <div class="bg-white rounded-2xl shadow p-4">
-        <img src="Avanza.jpg" alt="Toyota Avanza"style="width:300px; height:200px;">
-        
+      <div class="bg-white rounded-2xl shadow hover:shadow-xl transition p-4 text-center">
+        <img src="Avanza.jpg" alt="Toyota Avanza" class="w-full h-48 object-cover rounded-xl mb-4">
         <h4 class="text-xl font-semibold">Toyota Avanza</h4>
-        <p class="text-gray-600">Mulai Rp350.000 / hari</p>
+        <p class="text-gray-600">Mulai <span class="font-bold text-blue-600">Rp350.000</span> / hari</p>
       </div>
 
-      <div class="bg-white rounded-2xl shadow p-4">
-        <img src="Inova.jpg" alt="Toyota Innova"style="width:300px; height:200px;">
-
+      <div class="bg-white rounded-2xl shadow hover:shadow-xl transition p-4 text-center">
+        <img src="Inova.jpg" alt="Toyota Innova" class="w-full h-48 object-cover rounded-xl mb-4">
         <h4 class="text-xl font-semibold">Toyota Innova</h4>
-        <p class="text-gray-600">Mulai Rp500.000 / hari</p>
+        <p class="text-gray-600">Mulai <span class="font-bold text-blue-600">Rp500.000</span> / hari</p>
       </div>
 
-      <div class="bg-white rounded-2xl shadow p-4">
-        <img src="haice.jpg" alt="Toyota Haice"style="width:300px; height:200px;">
-
+      <div class="bg-white rounded-2xl shadow hover:shadow-xl transition p-4 text-center">
+        <img src="haice.jpg" alt="Toyota Hiace" class="w-full h-48 object-cover rounded-xl mb-4">
         <h4 class="text-xl font-semibold">Toyota Hiace</h4>
-        <p class="text-gray-600">Mulai Rp1.000.000 / hari</p>
+        <p class="text-gray-600">Mulai <span class="font-bold text-blue-600">Rp1.000.000</span> / hari</p>
       </div>
 
     </div>
   </section>
 
   <!-- Booking -->
-  <section id="booking" class="p-6 bg-blue-50">
-    <h3 class="text-2xl font-bold mb-4">Booking Sekarang</h3>
-    <p class="mb-4">Klik tombol di bawah untuk booking via WhatsApp.</p>
+  <section id="booking" class="py-12 px-6 bg-blue-50 text-center">
+    <h3 class="text-3xl font-bold mb-4">Booking Sekarang</h3>
+    <p class="mb-6 text-gray-700">Klik tombol di bawah untuk booking via WhatsApp.</p>
     <a href="https://wa.me/6285799092731?text=Halo%20Amero%20Transport,%20saya%20ingin%20booking%20mobil.%0A%0ANama:%0ATanggal%20Sewa:%0ADurasi%20(hari):%0AJenis%20Mobil:%0ALokasi%20Jemput:%0ACatatan%20Tambahan:" 
-   target="_blank" 
-   class="bg-green-500 text-white px-6 py-3 rounded-xl font-semibold shadow">
-   Booking via WhatsApp
+       target="_blank" 
+       class="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg transition">
+       📲 Booking via WhatsApp
     </a>
   </section>
 
   <!-- Kontak -->
-  <section id="kontak" class="p-6">
-    <h3 class="text-2xl font-bold mb-4">Kontak Kami</h3>
-    <p>Email: amero.transport@gmail.com</p>
-    <p>WhatsApp: +62 857-9909-2731</p>
-    <p>Lokasi: Gg. Sadewa, Ceper, Wedomartani, Kec. Ngemplak, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55584</p>
+  <section id="kontak" class="py-12 px-6 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-bold mb-6 text-center">Kontak Kami</h3>
+    <div class="bg-white rounded-2xl shadow p-6 space-y-3 text-gray-700">
+      <p><strong>Email:</strong> amero.transport@gmail.com</p>
+      <p><strong>WhatsApp:</strong> +62 857-9909-2731</p>
+      <p><strong>Lokasi:</strong> Gg. Sadewa, Ceper, Wedomartani, Ngemplak, Sleman, Yogyakarta 55584</p>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-blue-600 text-white text-center p-4 mt-6">
-    <p>&copy; 2025 Amero Transport. Semua Hak Dilindungi.</p>
+    <p>&copy; 2025 <span class="font-semibold">Amero Transport</span>. Semua Hak Dilindungi.</p>
   </footer>
 
   <script>
@@ -83,6 +84,14 @@
     const menu = document.getElementById("menu");
     btn.addEventListener("click", () => {
       menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
+      menu.classList.toggle("flex-col");
+      menu.classList.toggle("absolute");
+      menu.classList.toggle("top-16");
+      menu.classList.toggle("right-4");
+      menu.classList.toggle("bg-blue-600");
+      menu.classList.toggle("p-4");
+      menu.classList.toggle("rounded-xl");
     });
   </script>
 </body>

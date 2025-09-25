@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amero Transport Jogja</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    .wa-glow {
+      box-shadow: 0 0 15px #25D366, 0 0 30px #25D366;
+    }
+    .wa-glow:hover {
+      box-shadow: 0 0 25px #25D366, 0 0 40px #25D366;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -22,12 +30,13 @@
   </header>
 
   <!-- Hero -->
-  <section id="home" class="pt-24 min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center" style="background-image:url('https://source.unsplash.com/1600x900/?car,road');">
-    <div class="bg-black bg-opacity-50 p-6 rounded-2xl text-white">
+  <section id="home" class="pt-24 min-h-screen flex flex-col items-center justify-center text-center bg-cover bg-center relative" style="background-image:url('Haice.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 p-6 text-white">
       <h2 class="text-3xl md:text-5xl font-bold mb-4">Sewa Mobil di Jogja</h2>
       <p class="mb-6">Amero Transport menyediakan layanan sewa mobil dengan armada terbaru, harga terjangkau, dan driver berpengalaman.</p>
-      <a href="https://wa.me/6285869258318?text=Halo%20Amero%20Transport,%20saya%20ingin%20sewa%20mobil." 
-         class="bg-green-500 px-6 py-3 rounded-full font-semibold text-white shadow-lg animate-bounce hover:bg-green-600">
+      <a href="https://wa.me/6285869258318?text=Halo%20Amero%20Transport,%20saya%20ingin%20pesan%20mobil%3A%0ANama%3A%20%0ATanggal%3A%20%0ATujuan%3A%20%0AArmada%3A%20%0ADurasi%3A%20"
+         class="bg-green-500 px-6 py-3 rounded-full font-semibold text-white shadow-lg wa-glow animate-bounce hover:bg-green-600">
          Chat via WhatsApp
       </a>
     </div>
@@ -37,20 +46,26 @@
   <section id="armada" class="py-16 container mx-auto px-6">
     <h2 class="text-3xl font-bold text-center mb-10">Armada Kami</h2>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white shadow rounded-2xl overflow-hidden p-4 sr-card">
-        <img src="https://source.unsplash.com/400x250/?avanza,toyota" alt="Avanza" class="rounded-xl mb-4">
+      <div class="bg-white shadow rounded-2xl overflow-hidden p-4 sr-card transform transition duration-500 hover:scale-105">
+        <img src="Avanza.jpg" alt="Avanza" class="rounded-xl mb-4">
         <h3 class="font-bold text-xl">Toyota Avanza</h3>
-        <p class="text-gray-600">Nyaman untuk keluarga, cocok perjalanan wisata maupun bisnis.</p>
+        <p class="text-gray-600 mb-4">Nyaman untuk keluarga, cocok perjalanan wisata maupun bisnis.</p>
+        <a href="https://wa.me/6285869258318?text=Halo%20Amero%20Transport,%20saya%20ingin%20pesan%20Toyota%20Avanza%3A%0ANama%3A%20%0ATanggal%3A%20%0ATujuan%3A%20%0ADurasi%3A%20"
+           class="bg-green-500 px-4 py-2 rounded-full text-white wa-glow hover:bg-green-600">Pesan Avanza</a>
       </div>
-      <div class="bg-white shadow rounded-2xl overflow-hidden p-4 sr-card">
-        <img src="https://source.unsplash.com/400x250/?innova,toyota" alt="Innova" class="rounded-xl mb-4">
+      <div class="bg-white shadow rounded-2xl overflow-hidden p-4 sr-card transform transition duration-500 hover:scale-105">
+        <img src="Inova.jpg" alt="Innova" class="rounded-xl mb-4">
         <h3 class="font-bold text-xl">Toyota Innova</h3>
-        <p class="text-gray-600">Armada premium dengan ruang lega dan fitur lengkap.</p>
+        <p class="text-gray-600 mb-4">Armada premium dengan ruang lega dan fitur lengkap.</p>
+        <a href="https://wa.me/6285869258318?text=Halo%20Amero%20Transport,%20saya%20ingin%20pesan%20Toyota%20Innova%3A%0ANama%3A%20%0ATanggal%3A%20%0ATujuan%3A%20%0ADurasi%3A%20"
+           class="bg-green-500 px-4 py-2 rounded-full text-white wa-glow hover:bg-green-600">Pesan Innova</a>
       </div>
-      <div class="bg-white shadow rounded-2xl overflow-hidden p-4 sr-card">
-        <img src="https://source.unsplash.com/400x250/?elf,minibus" alt="Elf" class="rounded-xl mb-4">
-        <h3 class="font-bold text-xl">Isuzu Elf</h3>
-        <p class="text-gray-600">Ideal untuk rombongan, perjalanan wisata, dan acara besar.</p>
+      <div class="bg-white shadow rounded-2xl overflow-hidden p-4 sr-card transform transition duration-500 hover:scale-105">
+        <img src="Haice.jpg" alt="Hiace" class="rounded-xl mb-4">
+        <h3 class="font-bold text-xl">Toyota Hiace</h3>
+        <p class="text-gray-600 mb-4">Ideal untuk rombongan, perjalanan wisata, dan acara besar.</p>
+        <a href="https://wa.me/6285869258318?text=Halo%20Amero%20Transport,%20saya%20ingin%20pesan%20Toyota%20Hiace%3A%0ANama%3A%20%0ATanggal%3A%20%0ATujuan%3A%20%0ADurasi%3A%20"
+           class="bg-green-500 px-4 py-2 rounded-full text-white wa-glow hover:bg-green-600">Pesan Hiace</a>
       </div>
     </div>
   </section>
@@ -58,12 +73,20 @@
   <!-- Kontak -->
   <section id="kontak" class="py-16 bg-blue-600 text-white text-center">
     <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
-    <p class="mb-4">Alamat: Jl. Kaliurang KM 7, Yogyakarta</p>
+    <p class="mb-4">Alamat: Gg. Sadewa 29, Ceper, Wedomartani, Kec. Ngemplak, Kabupaten Sleman, DIY 55584</p>
     <p class="mb-6">Telp / WA: 0858-6925-8318</p>
-    <a href="https://wa.me/6285869258318?text=Halo%20Amero%20Transport,%20saya%20ingin%20sewa%20mobil."
-       class="bg-green-500 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-green-600">
+    <a href="https://wa.me/6285869258318?text=Halo%20Amero%20Transport,%20saya%20ingin%20pesan%20mobil%3A%0ANama%3A%20%0ATanggal%3A%20%0ATujuan%3A%20%0AArmada%3A%20%0ADurasi%3A%20"
+       class="bg-green-500 px-6 py-3 rounded-full font-semibold shadow-lg wa-glow hover:bg-green-600">
        Hubungi via WhatsApp
     </a>
+
+    <!-- Google Maps Embed -->
+    <div class="mt-8">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.276901375267!2d110.42474347474489!3d-7.869622792138044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a598d3a86e4f7%3A0xf42c1d2a4427be23!2sGg.%20Sadewa%2029%2C%20Ceper%2C%20Wedomartani%2C%20Ngemplak%2C%20Sleman%2C%20Daerah%20Istimewa%20Yogyakarta%2055584!5e0!3m2!1sid!2sid!4v1695623532107!5m2!1sid!2sid" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </section>
 
   <!-- Footer -->

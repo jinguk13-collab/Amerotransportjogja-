@@ -36,65 +36,50 @@
   </header>
 
   <!-- Hero -->
-  <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image: url('https://source.unsplash.com/1600x900/?car,rent');">
+  <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image: url('Logo.jpg');">
     <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative text-center px-6">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">Sewa Mobil di Yogyakarta</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">Amero Transport – Rental Mobil Nyaman di Jogja</h2>
       <p class="text-lg text-gray-200 mb-6 drop-shadow-md">Mudah, Nyaman, dan Terjangkau bersama Amero Transport</p>
-      <a href="https://wa.me/6285799092731" class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition font-semibold shadow">Booking via WhatsApp</a>
+      <a href="https://wa.me/6285799092731" class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition font-semibold shadow-lg">Booking via WhatsApp</a>
     </div>
   </section>
 
-  <<!-- Armada -->
-<section id="armada" class="py-20 bg-cover bg-center relative" style="background-image: url('Logo.jpg');">
-  <div class="absolute inset-0 bg-black bg-opacity-40"></div> <!-- overlay supaya teks terbaca -->
-  <div class="max-w-6xl mx-auto px-6 relative">
-    <h3 class="text-3xl font-bold text-center text-white mb-12">Pilihan Mobil Kami</h3>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <!-- Card mobil tetap seperti sebelumnya -->
-      </div>
-      <div class="swiper-pagination mt-6"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Testimoni -->
-<section id="testimoni" class="py-20 bg-cover bg-center relative" style="background-image: url('Logo.jpg');">
-  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-  <div class="max-w-4xl mx-auto px-6 relative text-center">
-    <h3 class="text-3xl font-bold text-white mb-12">Testimoni Pelanggan</h3>
-    <div class="swiper mySwiper2">
-      <div class="swiper-wrapper">
-        <!-- Testimoni tetap seperti sebelumnya -->
-      </div>
-      <div class="swiper-pagination mt-6"></div>
-    </div>
-  </div>
-</section>
-
-  <!-- Testimoni -->
-  <section id="testimoni" class="py-20 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-12">Testimoni Pelanggan</h3>
-      <div class="swiper mySwiper2">
+  <!-- Armada -->
+  <section id="armada" class="py-20 bg-cover bg-center relative" style="background-image: url('Logo.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="max-w-6xl mx-auto px-6 relative">
+      <h3 class="text-3xl font-bold text-center text-white mb-12">Pilihan Mobil Kami</h3>
+      <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+          <!-- Avanza -->
           <div class="swiper-slide">
-            <div class="bg-white p-6 rounded-xl shadow-md">
-              <p class="italic text-gray-700">“Pelayanannya ramah, mobil bersih dan nyaman. Recommended banget!”</p>
-              <h4 class="mt-4 font-semibold text-gray-900">– Budi, Jakarta</h4>
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+              <img src="Avanza.jpg" alt="Toyota Avanza" class="w-full h-56 object-cover"/>
+              <div class="p-5">
+                <h4 class="text-xl font-semibold mb-2">Toyota Avanza</h4>
+                <p class="text-gray-600">Mulai Rp350.000 / hari</p>
+              </div>
             </div>
           </div>
+          <!-- Innova -->
           <div class="swiper-slide">
-            <div class="bg-white p-6 rounded-xl shadow-md">
-              <p class="italic text-gray-700">“Harga terjangkau dan proses booking mudah banget. Sukses terus Amero Transport.”</p>
-              <h4 class="mt-4 font-semibold text-gray-900">– Sari, Bandung</h4>
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+              <img src="Inova.jpg" alt="Toyota Innova" class="w-full h-56 object-cover"/>
+              <div class="p-5">
+                <h4 class="text-xl font-semibold mb-2">Toyota Innova</h4>
+                <p class="text-gray-600">Mulai Rp500.000 / hari</p>
+              </div>
             </div>
           </div>
+          <!-- Hiace -->
           <div class="swiper-slide">
-            <div class="bg-white p-6 rounded-xl shadow-md">
-              <p class="italic text-gray-700">“Driver profesional dan tepat waktu. Liburan di Jogja jadi lancar.”</p>
-              <h4 class="mt-4 font-semibold text-gray-900">– Andi, Surabaya</h4>
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
+              <img src="Haice.jpg" alt="Toyota Hiace" class="w-full h-56 object-cover"/>
+              <div class="p-5">
+                <h4 class="text-xl font-semibold mb-2">Toyota Hiace</h4>
+                <p class="text-gray-600">Mulai Rp900.000 / hari</p>
+              </div>
             </div>
           </div>
         </div>
@@ -103,26 +88,68 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer id="kontak" class="bg-gray-900 text-gray-300 py-16">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div>
-        <h4 class="text-lg font-bold mb-4">Kontak</h4>
-        <p>📞 <a href="tel:+6285799092731" class="hover:text-white transition">+62 857-9909-2731</a></p>
-        <p>📧 <a href="mailto:amero.transport@gmail.com" class="hover:text-white transition">amero.transport@gmail.com</a></p>
-      </div>
-      <div>
-        <h4 class="text-lg font-bold mb-4">Alamat</h4>
-        <p>Gg. Sadewa, Ceper, Yogyakarta</p>
-        <iframe class="mt-3 w-full h-40 rounded-xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.837767673536!2d110.3667763147709!3d-7.79706849437577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a578c1c7d3b7b%3A0x4c8f7b7c8f7b7c7b!2sYogyakarta!5e0!3m2!1sen!2sid!4v1698234567890!5m2!1sen!2sid" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-      <div>
-        <h4 class="text-lg font-bold mb-4">Sosial Media</h4>
-        <p>📸 <a href="https://instagram.com/amerotransport" target="_blank" class="hover:text-white transition">Instagram: @amerotransport</a></p>
-        <p>📘 <a href="https://facebook.com/amerotransportjogja" target="_blank" class="hover:text-white transition">Facebook: Amero Transport Jogja</a></p>
+  <!-- Testimoni -->
+  <section id="testimoni" class="py-20 bg-cover bg-center relative" style="background-image: url('Logo.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="max-w-4xl mx-auto px-6 relative text-center text-white">
+      <h3 class="text-3xl font-bold mb-12">Testimoni Pelanggan</h3>
+      <div class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="bg-white p-6 rounded-xl shadow-md text-gray-800">
+              <p class="italic">“Pelayanannya ramah, mobil bersih dan nyaman. Recommended banget!”</p>
+              <h4 class="mt-4 font-semibold">– Budi, Jakarta</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white p-6 rounded-xl shadow-md text-gray-800">
+              <p class="italic">“Harga terjangkau dan proses booking mudah banget. Sukses terus Amero Transport.”</p>
+              <h4 class="mt-4 font-semibold">– Sari, Bandung</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-white p-6 rounded-xl shadow-md text-gray-800">
+              <p class="italic">“Driver profesional dan tepat waktu. Liburan di Jogja jadi lancar.”</p>
+              <h4 class="mt-4 font-semibold">– Andi, Surabaya</h4>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-6"></div>
       </div>
     </div>
-    <p class="text-center mt-12 text-sm text-gray-400">© 2025 Amero Transport. All rights reserved.</p>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="bg-cover bg-center py-16 relative" style="background-image: url('Logo.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="container mx-auto px-6 relative text-white">
+      <h3 class="text-3xl font-bold text-center mb-8">Kontak Kami</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Telepon</h4>
+          <p class="text-sm">📞 <a href="tel:+6285799092731" class="text-yellow-300 hover:text-yellow-400 transition">+62 857-9909-2731</a></p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Email</h4>
+          <p class="text-sm">📧 <a href="mailto:amero.transport@gmail.com" class="text-yellow-300 hover:text-yellow-400 transition">amero.transport@gmail.com</a></p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Alamat</h4>
+          <p class="text-sm">📍 Gg. Sadewa, Ceper, Yogyakarta</p>
+          <iframe class="mt-2 w-full h-40 rounded-lg" src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <h4 class="text-lg font-semibold mb-4">Ikuti Kami di Sosial Media</h4>
+        <p class="text-sm">📸 <a href="https://instagram.com/amerotransport" target="_blank" class="text-yellow-300 hover:text-yellow-400 transition">Instagram: @amerotransport</a></p>
+        <p class="text-sm">📘 <a href="https://facebook.com/amerotransportjogja" target="_blank" class="text-yellow-300 hover:text-yellow-400 transition">Facebook: Amero Transport Jogja</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <p class="text-center text-sm text-gray-400">© 2025 Amero Transport. All rights reserved.</p>
   </footer>
 
   <!-- Floating WhatsApp -->

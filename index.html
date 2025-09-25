@@ -1,161 +1,462 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amero Transport Jogja</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    body {
-      background-color: #f9fafb;
-      scroll-behavior: smooth;
-    }
-    .navbar-scrolled {
-      background-color: rgba(37, 99, 235, 0.95);
-      transition: background-color 0.3s ease;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amero Transport - Rental Mobil Nyaman di Jogja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23e5e7eb" width="800" height="600"/><text x="400" y="300" text-anchor="middle" font-family="Arial" font-size="48" fill="%236b7280">AMERO TRANSPORT</text><text x="400" y="350" text-anchor="middle" font-family="Arial" font-size="24" fill="%239ca3af">LOGO</text></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .navbar-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-scrolled .nav-link {
+            color: #374151 !important;
+        }
+        
+        .hover-zoom:hover {
+            transform: scale(1.05);
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: #3b82f6 !important;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body class="text-gray-800">
-
-  <!-- Navbar -->
-  <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-blue-600 text-white shadow">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <div class="flex items-center">
-        <img src="Logo.jpg" alt="Logo Amero Transport" class="h-10 mr-3" />
-        <h1 class="text-xl font-bold tracking-wide">Amero Transport</h1>
-      </div>
-      <nav class="space-x-6 font-medium">
-        <a href="#home" class="hover:text-yellow-300 transition">Home</a>
-        <a href="#armada" class="hover:text-yellow-300 transition">Armada</a>
-        <a href="#kontak" class="hover:text-yellow-300 transition">Kontak</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center relative" style="background-image: url('Logo.jpg');">
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="relative text-center px-6">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">Amero Transport – Rental Mobil Nyaman di Jogja</h2>
-      <p class="text-lg text-gray-200 mb-6 drop-shadow-md">Mudah, Nyaman, dan Terjangkau bersama Amero Transport</p>
-      <a href="https://wa.me/6285799092731" class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition font-semibold shadow-lg">Booking via WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- Armada -->
-  <section id="armada" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12">Pilihan Mobil Kami</h3>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <!-- Avanza -->
-          <div class="swiper-slide">
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-              <img src="Avanza.jpg" alt="Toyota Avanza" class="w-full h-56 object-cover"/>
-              <div class="p-5">
-                <h4 class="text-xl font-semibold mb-2">Toyota Avanza</h4>
-                <p class="text-gray-600">Mulai Rp350.000 / hari</p>
-              </div>
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-car text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold nav-link text-white">Amero Transport</span>
             </div>
-          </div>
-          <!-- Innova -->
-          <div class="swiper-slide">
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-              <img src="Inova.jpg" alt="Toyota Innova" class="w-full h-56 object-cover"/>
-              <div class="p-5">
-                <h4 class="text-xl font-semibold mb-2">Toyota Innova</h4>
-                <p class="text-gray-600">Mulai Rp500.000 / hari</p>
-              </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-white hover:text-blue-300 transition-colors">Home</a>
+                <a href="#armada" class="nav-link text-white hover:text-blue-300 transition-colors">Armada</a>
+                <a href="#kontak" class="nav-link text-white hover:text-blue-300 transition-colors">Kontak</a>
             </div>
-          </div>
-          <!-- Hiace -->
-          <div class="swiper-slide">
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300">
-              <img src="Haice.jpg" alt="Toyota Hiace" class="w-full h-56 object-cover"/>
-              <div class="p-5">
-                <h4 class="text-xl font-semibold mb-2">Toyota Hiace</h4>
-                <p class="text-gray-600">Mulai Rp900.000 / hari</p>
-              </div>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="nav-link text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-          </div>
         </div>
-        <div class="swiper-pagination mt-6"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimoni -->
-  <section id="testimoni" class="py-20 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-12">Testimoni Pelanggan</h3>
-      <div class="swiper mySwiper2">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="bg-white p-6 rounded-xl shadow-md">
-              <p class="italic text-gray-700">“Pelayanannya ramah, mobil bersih dan nyaman. Recommended banget!”</p>
-              <h4 class="mt-4 font-semibold text-gray-900">– Budi, Jakarta</h4>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#armada" class="block py-2 text-gray-700 hover:text-blue-600">Armada</a>
+                <a href="#kontak" class="block py-2 text-gray-700 hover:text-blue-600">Kontak</a>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white p-6 rounded-xl shadow-md">
-              <p class="italic text-gray-700">“Harga terjangkau dan proses booking mudah banget. Sukses terus Amero Transport.”</p>
-              <h4 class="mt-4 font-semibold text-gray-900">– Sari, Bandung</h4>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+                Amero Transport
+            </h1>
+            <h2 class="text-xl md:text-2xl mb-4 fade-in">
+                Rental Mobil Nyaman di Jogja
+            </h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto fade-in">
+                Mudah, Nyaman, dan Terjangkau bersama Amero Transport
+            </p>
+            <a href="https://wa.me/6285869258318" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 fade-in">
+                <i class="fab fa-whatsapp mr-2"></i>
+                Booking via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Armada Section -->
+    <section id="armada" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Armada Kami</h2>
+                <p class="text-xl text-gray-600">Pilihan mobil berkualitas untuk perjalanan Anda</p>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="bg-white p-6 rounded-xl shadow-md">
-              <p class="italic text-gray-700">“Driver profesional dan tepat waktu. Liburan di Jogja jadi lancar.”</p>
-              <h4 class="mt-4 font-semibold text-gray-900">– Andi, Surabaya</h4>
+            
+            <div class="swiper armada-swiper fade-in">
+                <div class="swiper-wrapper">
+                    <!-- Toyota Avanza -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-zoom transition-all duration-300">
+                            <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                                <svg class="w-32 h-20" viewBox="0 0 200 120" fill="none">
+                                    <rect x="20" y="60" width="160" height="40" rx="8" fill="#3b82f6"/>
+                                    <rect x="30" y="50" width="140" height="30" rx="6" fill="#60a5fa"/>
+                                    <circle cx="50" cy="100" r="12" fill="#1f2937"/>
+                                    <circle cx="150" cy="100" r="12" fill="#1f2937"/>
+                                    <rect x="40" y="40" width="120" height="20" rx="4" fill="#93c5fd"/>
+                                    <text x="100" y="35" text-anchor="middle" font-size="12" fill="#1f2937">AVANZA</text>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Toyota Avanza</h3>
+                                <p class="text-gray-600 mb-4">Mobil keluarga yang nyaman untuk 7 penumpang</p>
+                                <div class="text-3xl font-bold text-blue-600">Rp 350.000</div>
+                                <div class="text-gray-500">per hari</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Toyota Innova -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-zoom transition-all duration-300">
+                            <div class="h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                                <svg class="w-32 h-20" viewBox="0 0 200 120" fill="none">
+                                    <rect x="15" y="55" width="170" height="45" rx="8" fill="#10b981"/>
+                                    <rect x="25" y="45" width="150" height="35" rx="6" fill="#34d399"/>
+                                    <circle cx="50" cy="100" r="12" fill="#1f2937"/>
+                                    <circle cx="150" cy="100" r="12" fill="#1f2937"/>
+                                    <rect x="35" y="35" width="130" height="25" rx="4" fill="#6ee7b7"/>
+                                    <text x="100" y="30" text-anchor="middle" font-size="12" fill="#1f2937">INNOVA</text>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Toyota Innova</h3>
+                                <p class="text-gray-600 mb-4">MPV premium dengan kenyamanan maksimal</p>
+                                <div class="text-3xl font-bold text-blue-600">Rp 450.000</div>
+                                <div class="text-gray-500">per hari</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Toyota Hiace -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-zoom transition-all duration-300">
+                            <div class="h-64 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                                <svg class="w-32 h-20" viewBox="0 0 200 120" fill="none">
+                                    <rect x="10" y="50" width="180" height="50" rx="8" fill="#8b5cf6"/>
+                                    <rect x="20" y="40" width="160" height="40" rx="6" fill="#a78bfa"/>
+                                    <circle cx="45" cy="100" r="12" fill="#1f2937"/>
+                                    <circle cx="155" cy="100" r="12" fill="#1f2937"/>
+                                    <rect x="30" y="30" width="140" height="30" rx="4" fill="#c4b5fd"/>
+                                    <text x="100" y="25" text-anchor="middle" font-size="12" fill="#1f2937">HIACE</text>
+                                </svg>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Toyota Hiace</h3>
+                                <p class="text-gray-600 mb-4">Bus mini untuk rombongan hingga 16 orang</p>
+                                <div class="text-3xl font-bold text-blue-600">Rp 750.000</div>
+                                <div class="text-gray-500">per hari</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-8"></div>
             </div>
-          </div>
         </div>
-        <div class="swiper-pagination mt-6"></div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Kontak -->
-  <section id="kontak" class="py-16 bg-white">
-    <div class="container mx-auto px-6 text-gray-800">
-      <h3 class="text-3xl font-bold text-center mb-8">Kontak Kami</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Telepon</h4>
-          <p class="text-sm">📞 <a href="tel:+6285799092731" class="text-blue-600 hover:text-blue-700 transition">+62 857-9909-2731</a></p>
+    <!-- Testimoni Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Testimoni Pelanggan</h2>
+                <p class="text-xl text-gray-600">Apa kata mereka tentang layanan kami</p>
+            </div>
+            
+            <div class="swiper testimoni-swiper fade-in">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"Pelayanan sangat memuaskan, mobil bersih dan nyaman. Recommended!"</p>
+                            <div class="font-bold text-gray-800">- Budi Santoso</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"Harga terjangkau dengan kualitas terbaik. Terima kasih Amero Transport!"</p>
+                            <div class="font-bold text-gray-800">- Sari Dewi</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"Driver ramah dan profesional. Perjalanan jadi lebih menyenangkan."</p>
+                            <div class="font-bold text-gray-800">- Ahmad Rizki</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"Booking mudah via WhatsApp, respon cepat. Sangat puas!"</p>
+                            <div class="font-bold text-gray-800">- Maya Indira</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"Mobil selalu dalam kondisi prima. Tidak pernah mengecewakan."</p>
+                            <div class="font-bold text-gray-800">- Doni Pratama</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"Sudah langganan 2 tahun, pelayanan konsisten bagus!"</p>
+                            <div class="font-bold text-gray-800">- Rina Sari</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"Tepat waktu dan dapat diandalkan untuk acara penting."</p>
+                            <div class="font-bold text-gray-800">- Eko Wijaya</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"Harga transparan tanpa biaya tersembunyi. Mantap!"</p>
+                            <div class="font-bold text-gray-800">- Lisa Permata</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <p class="text-gray-600 italic mb-4">"Armada lengkap dan terawat. Pilihan terbaik di Jogja!"</p>
+                            <div class="font-bold text-gray-800">- Fajar Nugroho</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-8"></div>
+            </div>
         </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Email</h4>
-          <p class="text-sm">📧 <a href="mailto:amero.transport@gmail.com" class="text-blue-600 hover:text-blue-700 transition">amero.transport@gmail.com</a></p>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="kontak" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+                <p class="text-xl text-gray-600">Siap melayani kebutuhan transportasi Anda</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <div class="space-y-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-phone text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Telepon</h3>
+                                <p class="text-gray-600">085869258318</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Email</h3>
+                                <p class="text-gray-600">info@amerotransport.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Alamat</h3>
+                                <p class="text-gray-600">Jl. Malioboro No. 123, Yogyakarta</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <h3 class="font-bold text-gray-800 mb-4">Ikuti Kami</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white hover:bg-pink-600 transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="bg-gray-100 rounded-xl overflow-hidden h-80">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9449!2d110.3659!3d-7.7956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a14f4d1234567%3A0x1234567890abcdef!2sJl.%20Malioboro%2C%20Yogyakarta!5e0!3m2!1sen!2sid!4v1234567890123"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Alamat</h4>
-          <p class="text-sm">📍 Gg. Sadewa, Ceper, Yogyakarta</p>
-          <iframe class="mt-2 w-full h-40 rounded-lg" src="https://www.google.com/maps/embed?pb=..." allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Amero Transport. Semua hak dilindungi.</p>
         </div>
-      </div>
-      <div class="mt-8 text-center">
-        <h4 class="text-lg font-semibold mb-4">Ikuti Kami di Sosial Media</h4>
-        <p class="text-sm">📸 <a href="https://instagram.com/amerotransport" target="_blank" class="text-blue-600 hover:text-blue-700 transition">Instagram: @amerotransport</a></p>
-        <p class="text-sm">📘 <a href="https://facebook.com/amerotransportjogja" target="_blank" class="text-blue-600 hover:text-blue-700 transition">Facebook: Amero Transport Jogja</a></p>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-12">
-    <p class="text-center text-sm text-gray-400">© 2025 Amero Transport. All rights reserved.</p>
-  </footer>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6285869258318" target="_blank" rel="noopener noreferrer" class="floating-whatsapp">
+        <div class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition-colors">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </div>
+    </a>
 
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/6285799092731" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition" aria-label="Hubungi kami via WhatsApp">
-    💬
-  </a>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    // ScrollReveal
-    ScrollReveal().reveal('.swiper-slide', { delay: 150, distance: '40px', origin: '
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+         //Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+      
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Initialize Swiper for Armada
+        const armadaSwiper = new Swiper('.armada-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Initialize Swiper for Testimoni
+        const testimoniSwiper = new Swiper('.testimoni-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Fade in animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Initial animation check
+        animateOnScroll();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9849017202f7fd9e',t:'MTc1ODc4NzQxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+    

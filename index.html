@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amero Transport Jogja</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    body {
-      /* Background with logo as a subtle watermark */
-      background-image: url('Logo.jpg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed; /* Keeps logo in place while scrolling */
-      background-size: 30%; /* Adjust size to make logo subtle */
-      background-color: #f9fafb; /* Fallback color (Tailwind bg-gray-50) */
-      opacity: 0.1; /* Subtle transparency for logo */
-      position: relative;
-    }
-    /* Ensure sections with solid backgrounds are not transparent */
-    section, footer {
-      position: relative;
-      z-index: 1; /* Place sections above the body background */
-      background: inherit; /* Ensure sections retain their own background */
-    }
-    .navbar-scrolled {
-      background-color: rgba(37, 99, 235, 0.9); /* Slightly transparent blue-600 */
-      transition: background-color 0.3s ease;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Amero Transport Jogja</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<style>
+  /* Watermark logo menggunakan pseudo-element, tanpa bikin konten transparan */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('Logo.jpg');
+    background-repeat: no-repeat;
+    background-size: 30%;
+    opacity: 0.05; /* Subtle watermark */
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* biar gak ganggu klik */
+  }
+
+  body {
+    background-color: #f9fafb; /* fallback */
+    position: relative;
+    z-index: 1;
+  }
+
+  .navbar-scrolled {
+    background-color: rgba(37, 99, 235, 0.9); /* Slightly transparent blue-600 */
+    transition: background-color 0.3s ease;
+  }
+</style>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <!-- Navbar -->
-  <header id="navbar" class="fixed top-0 left-0 w-full bg-blue-600 text-white shadow z-50">
+  <header id="navbar" class="fixed top-0 left-0 w-full bg-blue-600 text-white shadow z-50 transition-colors duration-300">
     <div class="container mx-auto flex justify-between items-center p-4">
       <div class="flex items-center">
         <img src="Logo.jpg" alt="Logo Amero Transport" class="h-10 mr-2" />
@@ -56,20 +62,19 @@
     </div>
   </section>
 
-  <!-- Rest of the sections remain unchanged -->
-  <!-- Layanan -->
+  <!-- Armada -->
   <section id="armada" class="py-16 bg-white">
-    <!-- ... (unchanged) -->
+    <!-- Konten armada -->
   </section>
 
   <!-- Testimoni -->
   <section id="testimoni" class="py-16 bg-gray-50">
-    <!-- ... (unchanged) -->
+    <!-- Konten testimoni -->
   </section>
 
   <!-- Footer -->
   <footer id="kontak" class="bg-gray-900 text-gray-300 py-12">
-    <!-- ... (unchanged) -->
+    <!-- Konten footer -->
   </footer>
 
   <!-- Floating WhatsApp Button -->
@@ -77,10 +82,10 @@
     💬
   </a>
 
-  <!-- Swiper.js and ScrollReveal scripts remain unchanged -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // Initialize ScrollReveal
+    // ScrollReveal
     ScrollReveal().reveal('.swiper-slide', {
       delay: 200,
       distance: '50px',
@@ -103,24 +108,15 @@
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       spaceBetween: 20,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
+      pagination: { el: ".swiper-pagination", clickable: true },
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
     });
 
     // Swiper Testimoni
     var swiper2 = new Swiper(".mySwiper2", {
       slidesPerView: 1,
       autoplay: { delay: 3000 },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      }
+      pagination: { el: ".swiper-pagination", clickable: true }
     });
   </script>
 </body>
